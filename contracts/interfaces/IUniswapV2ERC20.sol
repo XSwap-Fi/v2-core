@@ -1,9 +1,8 @@
-pragma solidity >=0.5.0;
+pragma solidity ^0.8.10;
 
-interface IUniswapV2ERC20 {
-    event Approval(address indexed owner, address indexed spender, uint value);
-    event Transfer(address indexed from, address indexed to, uint value);
+import "./IERC20.sol";
 
+interface IUniswapV2ERC20 is IERC20 {
     function name() external pure returns (string memory);
     function symbol() external pure returns (string memory);
     function decimals() external pure returns (uint8);
