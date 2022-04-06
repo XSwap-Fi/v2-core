@@ -13,13 +13,11 @@ contract UniswapV2Factory is Initializable, UUPSUpgradeable, OwnableUpgradeable,
 
     mapping(address => mapping(address => address)) public getPair;
     address[] public allPairs;
-    // **************** don't modify previous vars ****************
-    // **************** append new vars only ****************
 
-    // **************** reset function, remove this for the final product ****************
     mapping(address => address[]) private forRemoveGetPairMap;
     address[] private forRemoveGetPairArray;
-    // **************** end reset function, remove this for the final product ****************
+
+    // **************** [WARNING] Don't modify previous vars & append new vars only ****************
 
     // **************** don't touch ****************
     constructor() {}
