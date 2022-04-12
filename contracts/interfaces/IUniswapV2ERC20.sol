@@ -4,7 +4,7 @@ import "./IERC20.sol";
 
 interface IUniswapV2ERC20 is IERC20 {
     function name() external pure returns (string memory);
-    function symbol() external pure returns (string memory);
+    function symbol() external view returns (string memory);
     function decimals() external pure returns (uint8);
     function totalSupply() external view returns (uint);
     function balanceOf(address owner) external view returns (uint);
